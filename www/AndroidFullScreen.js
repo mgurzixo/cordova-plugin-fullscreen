@@ -71,7 +71,12 @@
 		setSystemUiVisibility: function(visibility, successFunction, errorFunction)
 		{
 			cordova.exec(successFunction, errorFunction, 'AndroidFullScreen', 'setSystemUiVisibility', [visibility || 0]);
-		}
+		},
+
+		getFullscreenStatus: function(successFunction, errorFunction)
+		{
+			cordova.exec(successFunction, errorFunction, 'AndroidFullScreen', 'getFullscreenStatus', []);
+		},
 		
 	};
 	
